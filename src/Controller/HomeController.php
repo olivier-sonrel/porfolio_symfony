@@ -24,10 +24,10 @@ class HomeController extends AbstractController
      */
     public function education(EducationRepository $repository): Response
     {
-        $graduations = $repository->findAll();
+        $educations = $repository->findAll();
 
         return $this->render('home/education.html.twig', [
-            'graduations' => $graduations,
+            'educations' => $educations,
         ]);
     }
 

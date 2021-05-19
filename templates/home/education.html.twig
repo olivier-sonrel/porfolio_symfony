@@ -3,7 +3,22 @@
 {% block body %}
     <div class="d-flex flex-column align-items-center">
         <h1>Mes Dix Plaumes</h1>
-
+        <div class="row">
+            {% for education in educations %}
+                <div class="card col-md-4" style="width:18rem">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ education.title }}</h5>
+                        <p class="card-text" style="max-height: 250px;
+                                                height: 250px;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;">
+                            {{ education.school }}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
 
