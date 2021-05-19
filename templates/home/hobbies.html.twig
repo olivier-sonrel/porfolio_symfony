@@ -3,6 +3,15 @@
 {% block body %}
     <div class="d-flex flex-column align-items-center">
         <h1>Voici mes passions.</h1>
-        <img src="/assets/images/lovemtg.webp" alt="lovemtg">
+        <div class="row">
+            {% for hobbie in hobbies %}
+                <div class="card col-md-4" style="width:18rem">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ hobbie.name }}</h5>
+                        <img src="/assets/images/{{ hobbie.image }}" alt="">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
